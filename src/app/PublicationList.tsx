@@ -34,7 +34,7 @@ const PublicationList: React.FC<PublicationListProps> = ({ publications }) => {
     }, [categories]);
 
     return (
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-1">
             <h1 className="text-4xl font-bold mb-8">Publications</h1>
             <p className="mb-8">
                 You can also find my articles on my <Link href="#" color="primary">Google Scholar profile</Link>.
