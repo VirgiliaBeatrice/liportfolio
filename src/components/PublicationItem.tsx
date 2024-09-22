@@ -36,7 +36,7 @@ const PublicationItem: React.FC<PublicationItemProps> = ({ publication, number }
           )}
         </div>
       )}
-      <p className="mb-2"><strong>Recommended citation: </strong></p>
+      <p className="mb-2"><strong>Citation: </strong></p>
       <p className="mb-2">
         {`${publication.author}, "${publication.title}," ${publication.journal || publication.booktitle}, ${publication.volume ? `vol. ${publication.volume}, ` : ''}${publication.number ? `no. ${publication.number}, ` : ''}${publication.pages ? `pp. ${publication.pages}, ` : ''}${publication.year}.`}
       </p>

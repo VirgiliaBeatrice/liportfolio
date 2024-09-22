@@ -1,9 +1,10 @@
 'use client'
 
 import React from 'react';
-import { Card, CardBody, Divider, Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
+import { Card, CardBody, Divider } from "@nextui-org/react";
 import ProfileSidebar from '../../components/ProfileSidebar';
 import StarRating from '../../components/StarRating';
+import ClientBreadcrumbs from '@/components/ClientBreadcrumbs';
 
 const AboutPage = () => {
   return (
@@ -12,10 +13,12 @@ const AboutPage = () => {
         <ProfileSidebar />
       </aside>
       <main className="w-full sm:w-3/4">
-        <Breadcrumbs size='lg' className='mb-4' radius='full' variant='solid'>
-          <BreadcrumbItem href="/">Home</BreadcrumbItem>
-          <BreadcrumbItem href="/about">About</BreadcrumbItem>
-        </Breadcrumbs>
+        <ClientBreadcrumbs
+          items={[
+            { href: "/", label: "Home" },
+            { href: "/about", label: "About" }
+          ]}
+        />
         <Card className='p-8'>
           <CardBody>
             <section className="mb-8">

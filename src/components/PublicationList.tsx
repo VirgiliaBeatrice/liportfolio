@@ -37,8 +37,8 @@ const PublicationList: React.FC<PublicationListProps> = ({ publications }) => {
       });
 
       return (
-        <Card key={type} className="px-4">
-          <CardHeader className="my-4">
+        <div key={type}>
+          <CardHeader className="my-0">
             <h2 className="text-2xl font-bold">{formatPublicationType(type)}</h2>
           </CardHeader>
           <CardBody>
@@ -50,22 +50,12 @@ const PublicationList: React.FC<PublicationListProps> = ({ publications }) => {
               </React.Fragment>
             ))}
           </CardBody>
-        </Card>
-      );
+        </div>
+        );
     });
   }, [categories]);
 
-  return (
-    <div className="max-w-4xl mx-auto">
-      <div>
-        {/* <h1 className="text-4xl font-bold mb-8">Publications</h1> */}
-        {/* <p className="mb-8">
-          You can also find my articles on my <Link href="#" color="primary">Google Scholar profile</Link>.
-      </p> */}
-        {renderPublications}
-      </div>
-    </div>
-  );
+  return renderPublications;
 };
 
 export default PublicationList;

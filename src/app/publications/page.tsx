@@ -2,10 +2,11 @@ import React from 'react';
 import { BibtexParser } from 'bibtex-js-parser';
 import PublicationList from '@/components/PublicationList';
 import ProfileSidebar from '@/components/ProfileSidebar';
-import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
+import { Card } from "@nextui-org/react";
 import { Publication } from '@/types';
 import fs from 'fs/promises';
 import path from 'path';
+import ClientBreadcrumbs from '@/components/ClientBreadcrumbs';
 
 async function getPublications(): Promise<Publication[]> {
   const filePath = path.join(process.cwd(), 'public', 'contents', 'publications.bib');
@@ -31,21 +32,20 @@ const PublicationsPage: React.FC = async () => {
   const publications = await getPublications();
 
   return (
-    <div className="container mx-auto px-4 flex flex-col sm:flex-row gap-4">
-      <div className="flex-1">
+    <div className="flex flex-col sm:flex-row gap-4">
+      <aside className="w-full sm:w-1/4">
         <ProfileSidebar />
-      </div>
-      <main>
-        <div className="p-4">
-          <div>
-            <h1 className="text-4xl font-bold mb-4">Publications</h1>
-            {/* <Breadcrumbs size='lg' className='mb-4' radius='full' variant='solid'>
-              <BreadcrumbItem href="/">Good</BreadcrumbItem>
-              <BreadcrumbItem href="/publications">Publications</BreadcrumbItem>
-            </Breadcrumbs> */}
-          </div>
+      </aside>
+      <main className="w-full sm:w-3/4">
+        <ClientBreadcrumbs
+          items={[
+            { href: "/", label: "Home" },
+            { label: "Publications" }
+          ]}
+        />
+        <Card className='p-8' key={publications.length}>
           <PublicationList publications={publications} />
-        </div>
+        </Card>
       </main>
     </div>
   );
