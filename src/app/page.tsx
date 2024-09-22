@@ -3,7 +3,6 @@
 import React from 'react';
 import { Card, CardBody, Link } from "@nextui-org/react";
 import PublicationList from '../components/PublicationList';
-import { fetchPublications } from './edit/EditorPage';
 import { Publication } from '@/types';
 import ProfileSidebar from '@/components/ProfileSidebar';
 
