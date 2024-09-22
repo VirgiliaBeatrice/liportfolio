@@ -2,6 +2,7 @@ import React from 'react';
 import { BibtexParser } from 'bibtex-js-parser';
 import PublicationList from '@/components/PublicationList';
 import ProfileSidebar from '@/components/ProfileSidebar';
+import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/react";
 import { Publication } from '@/types';
 import fs from 'fs/promises';
 import path from 'path';
@@ -34,9 +35,18 @@ const PublicationsPage: React.FC = async () => {
       <div className="flex-1">
         <ProfileSidebar />
       </div>
-      <div className="flex-2 p-4">
-        <PublicationList publications={publications} />
-      </div>
+      <main>
+        <div className="p-4">
+          <div>
+            <h1 className="text-4xl font-bold mb-4">Publications</h1>
+            {/* <Breadcrumbs size='lg' className='mb-4' radius='full' variant='solid'>
+              <BreadcrumbItem href="/">Good</BreadcrumbItem>
+              <BreadcrumbItem href="/publications">Publications</BreadcrumbItem>
+            </Breadcrumbs> */}
+          </div>
+          <PublicationList publications={publications} />
+        </div>
+      </main>
     </div>
   );
 };

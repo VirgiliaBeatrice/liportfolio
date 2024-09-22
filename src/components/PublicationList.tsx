@@ -58,7 +58,7 @@ const PublicationList: React.FC<PublicationListProps> = ({ publications }) => {
   return (
     <div className="max-w-4xl mx-auto">
       <div>
-        <h1 className="text-4xl font-bold mb-8">Publications</h1>
+        {/* <h1 className="text-4xl font-bold mb-8">Publications</h1> */}
         {/* <p className="mb-8">
           You can also find my articles on my <Link href="#" color="primary">Google Scholar profile</Link>.
       </p> */}
