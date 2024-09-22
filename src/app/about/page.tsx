@@ -56,12 +56,12 @@ const AboutPage = () => {
                 <p className="text-gray-500">April 2018 - March 2024</p>
               </div>
               <div className="mb-4">
-                <h3 className="text-xl font-medium">Master's in Engineering</h3>
+                <h3 className="text-xl font-medium">{`Master's in Engineering`}</h3>
                 <p className="text-gray-600">Tokyo Institute of Technology</p>
                 <p className="text-gray-500">September 2016 - March 2018</p>
               </div>
               <div className="mb-4">
-                <h3 className="text-xl font-medium">Bachelor's in Engineering</h3>
+                <h3 className="text-xl font-medium">{`Bachelor's in Engineering`}</h3>
                 <p className="text-gray-600">Taiyuan University of Technology</p>
                 <p className="text-gray-500">September 2008 - June 2012</p>
               </div>
