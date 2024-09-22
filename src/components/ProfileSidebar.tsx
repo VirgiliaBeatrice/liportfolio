@@ -17,24 +17,24 @@ const ProfileSidebar: React.FC = () => {
           Doctoral Student at Hasegawa Lab,<br />
           Tokyo Institute of Technology
         </p>
-        <p className="mb-4 mx-4 text-balance text-left text-gray-500 text-sm">
+        <p className="mb-4 mx-4 text-left text-gray-500 text-sm">
           Haoyan Li is an engineer and researcher with expertise in embedded systems, robotics, and HCI, having worked on UV photometer development and UI/UX design for teleoperation systems. He contributed to research and development projects and continuously explores cutting-edge technologies.
         </p>
         <h3 className="text-lg font-semibold mb-2">Follow</h3>
-        <ul className="space-y-2 mx-4">
-          <li>
+        <div className="flex flex-row space-x-2 mx-4 items-center justify-center gap-2">
+          <div className='w-auto'>
             <Link href="mailto:haoyan.li@gmail.com" className="flex items-center">
                 <Envelope className='mr-2' />
               Email
             </Link>
-          </li>
-          <li>
+          </div>
+          <div className='w-auto'>
             <Link href="https://github.com/virgiliabeatrice" className="flex items-center">
                 <Github className='mr-2' />
               Github
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </CardBody>
     </Card>
   );

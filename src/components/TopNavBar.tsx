@@ -7,7 +7,7 @@ const TopNavBar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center ml-2">
-            <Link href="/" className="text-xl font-bold">Portofolio</Link>
+            <Link href="/" className="text-2xl font-bold">Portofolio</Link>
           </div>
           <div className="hidden md:flex space-x-4">
             <Link href="/" className="nav-link">Home</Link>
