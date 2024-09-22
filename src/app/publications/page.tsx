@@ -22,6 +22,7 @@ async function getPublications(): Promise<Publication[]> {
     number: entry.number || '',
     abstract: entry.abstract || '',
     type: entry.type || 'article',
+    note: entry.note || '',
   }));
 }
 

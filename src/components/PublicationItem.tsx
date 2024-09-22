@@ -10,10 +10,15 @@ interface PublicationItemProps {
 const PublicationItem: React.FC<PublicationItemProps> = ({ publication, number }) => {
   const [showAbstract, setShowAbstract] = useState(false);
 
+  const isFirstAuthor = publication.note && publication.note.includes("first author");
+  console.log(publication.note, isFirstAuthor);
+  const hasDownloadLink = publication.note && /Download link:\s*(.+)/.test(publication.note);
+  const downloadLink = hasDownloadLink ? publication.note?.match(/Download link:\s*(.+)/)?.[1].trim() : '';
+
   return (
     <div className="mb-4">
       <h3 className="text-xl font-semibold mb-2">
-        {number}. {publication.note && publication.note.includes("first author") ? `★ ${publication.title}` : publication.title}
+        {publication.note && publication.note.includes("first author") ? `★ ${number}. ${publication.title}` : `${number}. ${publication.title}`}
       </h3>
       <p className="italic mb-2">
         Published in <em>{publication.journal || publication.booktitle}</em>, {publication.year}
@@ -36,9 +41,11 @@ const PublicationItem: React.FC<PublicationItemProps> = ({ publication, number }
         {`${publication.author}, "${publication.title}," ${publication.journal || publication.booktitle}, ${publication.volume ? `vol. ${publication.volume}, ` : ''}${publication.number ? `no. ${publication.number}, ` : ''}${publication.pages ? `pp. ${publication.pages}, ` : ''}${publication.year}.`}
       </p>
       <div>
-        <Button as={Link} href="#" color="primary" size="sm" className="mr-2">
-          Download Paper
-        </Button>
+        {downloadLink && (
+          <Button as={Link} href={downloadLink} color="primary" size="sm" className="mr-2">
+            Download Paper
+          </Button>
+        )}
         {publication.type === 'conference' && (
           <Button as={Link} href="#" color="secondary" size="sm">
             Download Slides
