@@ -9,10 +9,10 @@ import ClientBreadcrumbs from '@/components/ClientBreadcrumbs';
 const AboutPage = () => {
   return (
     <div className="flex flex-col sm:flex-row gap-4">
-      <aside className="w-full sm:w-1/4">
+      <aside className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4">
         <ProfileSidebar />
       </aside>
-      <main className="w-full sm:w-3/4">
+      <main className="w-full sm:w-1/2 md:w-1/2 lg:w-3/4">
         <ClientBreadcrumbs
           items={[
             { href: "/", label: "Home" },
