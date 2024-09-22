@@ -6,6 +6,20 @@ const nextConfig = {
   // Configure `pageExtensions`` to include MDX files
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   // Optionally, add any other Next.js config below
+    // Add this section to allow serving PDF files
+  async headers() {
+    return [
+      {
+        source: '/pdfs/:path*',
+        headers: [
+          {
+            key: 'Content-Disposition',
+            value: 'attachment',
+          },
+        ],
+      },
+    ];
+  },
 }
  
 const withMDX = createMDX({
