@@ -16,6 +16,8 @@
     "@tailwindcss/typography": "^0.5.15",
     "@types/cors": "^2.8.17",
     "@types/mdx": "^2.0.13",
+    "bibtex-js-parser": "^1.1.6",
+    "bibtex-parse-js": "^0.0.23",
     "body-parser": "^1.20.3",
     "bootstrap-icons": "^1.11.3",
     "cors": "^2.8.5",

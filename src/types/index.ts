@@ -1,26 +1,29 @@
 // src/types/index.ts
 export interface Publication {
-    id: number;
-    title: string;
-    author: string;
-    year: number;
-    journal?: string;
-    volume?: string;
-    number?: string;
-    pages?: string;
-    month?: string;
-    doi?: string;
-    abstract?: string;
-    keywords?: string[];
-    url?: string;
-    publisher?: string;
-    address?: string;
-    booktitle?: string;
-    editor?: string;
-    series?: string;
-    edition?: string;
-    organization?: string;
-    note?: string;
-    type?: string; // 'article', 'book', 'conference', etc.
-  }
+  id: string;
+  type: string;
+  title: string;
+  author?: string;
+  editor?: string;
+  booktitle?: string;
+  publisher?: string;
+  school?: string;
+  address?: string;
+  year?: string | number;
+  month?: string;
+  pages?: string;
+  journal?: string;
+  volume?: string;
+  number?: string | number;
+  series?: string;
+  doi?: string;
+  issn?: string;
+  url?: string;
+  urldate?: string;
+  language?: string;
+  copyright?: string;
+  note?: string;
+  keyword?: string;
+  abstract?: string;
+}
   

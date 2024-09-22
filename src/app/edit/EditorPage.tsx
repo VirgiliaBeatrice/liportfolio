@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Publication } from '@/types';
 import PublicationForm from './PublicationForm';
-import PublicationList from '../PublicationList';
+import PublicationList from '../../components/PublicationList';
 import publicationsData from '../../data/publications.json';
 
 

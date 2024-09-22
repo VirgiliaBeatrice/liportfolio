@@ -11,6 +11,12 @@
 - [x] Configure project to use public folder
 - [x] Create About page with resume information
 - [x] Add resume directory to .gitignore
+- [ ] Create a markdown file for each project section
+- [ ] Create a markdown file for each publications section
+- [ ] Create ProjectCard component for displaying project details
+- [ ] Create projectsData.ts file to store project information
+- [ ] Update projects/page.tsx to use ProjectCard components
+- [ ] Add thumbnail images for each project in the public folder
 
 ## Medium Priority
 - [ ] Optimize responsive design
@@ -19,12 +25,16 @@
 - [ ] Add necessary static files (images, documents, etc.) to the public folder
 - [ ] Create Projects page
 - [ ] Create Research page
+- [ ] Implement filtering and sorting options for projects
+- [ ] Add pagination or infinite scroll for projects list
 
 ## Low Priority
 - [ ] Refactor CSS for better maintainability
 - [ ] Add animations for smoother transitions
 - [ ] Implement internationalization (i18n) support
 - [ ] Add downloadable PDF version of resume
+- [ ] Add animations for ProjectCard hover effects
+- [ ] Implement a lightbox for project images
 
 ## Completed
 - [x] Create basic layout structure
@@ -48,3 +58,4 @@
 - ProfileSidebar component created for better code organization
 - About page created with resume information in English
 - Resume documents in public/documents/resume are now ignored by git
+

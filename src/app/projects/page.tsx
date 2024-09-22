@@ -9,7 +9,7 @@ import SampleContent from '../../content/sampleContent.mdx';
 
 const ProjectsPage: React.FC = () => {
   return (
-    <div className="flex flex-col sm:flex-row gap-4">
+    <div className="flex flex-col sm:flex-row gap-2">
       <div className="w-full">
         <Card className='p-8'>
           <CardBody>
