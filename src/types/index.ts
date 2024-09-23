@@ -26,4 +26,14 @@ export interface Publication {
   keyword?: string;
   abstract?: string;
 }
-  
+
+export interface MdxMetaData {
+  title: string;
+  description: string;
+  tags: string[];
+  technologies: string[];
+  type: string;
+  period: string;
+  role: string[];
+  status: 'completed' | 'in-progress' | 'planned';
+}
